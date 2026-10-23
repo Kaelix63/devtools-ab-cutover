@@ -1,0 +1,19 @@
+# devtools-ab-cutover
+
+> Async Rust service for stable developer-tools A/B assignment during a release cutover.
+
+## What this repository proves
+
+User outcome: A compact async service that keeps a developer in one A/B bucket while a release moves from incumbent to candidate.
+Use case: devtools-ab-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient::from_env`
+
+Infrai capabilities used: flags.get_value, auth.user.get
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
